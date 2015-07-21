@@ -17,7 +17,6 @@ gem 'httparty'
 gem 'haversine'
 gem 'figaro'
 gem 'rack-cors', :require => 'rack/cors'
-gem 'tilt'
 
 group :development, :test do
   gem 'web-console', '~> 2.0'

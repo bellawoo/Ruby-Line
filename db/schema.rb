@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150721182305) do
+ActiveRecord::Schema.define(version: 20150721223521) do
 
   create_table "bikes", force: :cascade do |t|
-    t.string   "location"
+    t.string   "name"
     t.integer  "bikes_avail"
     t.integer  "docks_avail"
     t.float    "lat"
@@ -24,19 +24,20 @@ ActiveRecord::Schema.define(version: 20150721182305) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "trains", force: :cascade do |t|
-    t.string   "line_code1"
-    t.string   "destination"
-    t.string   "minutes"
+  create_table "train_stations", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "code"
+    t.string   "name"
     t.float    "lat"
     t.float    "long"
     t.float    "distance"
-    t.string   "line_code2"
-    t.string   "line_code3"
-    t.string   "other_platform"
-    t.string   "station_code"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+  end
+
+  create_table "trains", force: :cascade do |t|
+    t.string "line"
+    t.string "destination"
+    t.string "minutes"
   end
 
 end
