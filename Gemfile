@@ -13,12 +13,21 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'rails-api'
+gem 'httparty'
+gem 'haversine'
+gem 'figaro'
+gem 'rack-cors', :require => 'rack/cors'
+gem 'tilt'
 
 group :development, :test do
-  gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'pry'
+  gem 'pry-rails'
   gem 'better_errors'
+  gem 'quiet_assets'
 end
 
+group :production do
+  gem 'pg'
+end
