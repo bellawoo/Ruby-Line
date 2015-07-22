@@ -8,8 +8,10 @@ json.locations @locations do |location|
     json.(location, :bikes_avail, :docks_avail)
   end
 
-  if location.is_a? Train
+  if location.is_a? TrainStation
     json.type "metrorail"
-    json.(location, :line, :destination, :min)
+    json.trains location.upcoming_trains do |trains|
+      json.(trains, :line, :destination, :minutes)
+    end
   end
 end

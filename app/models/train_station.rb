@@ -1,10 +1,12 @@
 class TrainStation < ActiveRecord::Base
   has_many :trains
+  validates_presence_of :code, :name, :lat, :long
+  validates_uniqueness_of :code
 
   Token = Figaro.env.wmata_api_key
 
   def self.stations
-    response = HTTParty.get("https://api.wmata.com/Rail.svc/json/jStations", query: {api_key: "#{Token}" })
+    response = HTTParty.get("https://api.wmata.com/Rail.svc/json/jStations", query: {api_key: Token })
     metro_stations = response["Stations"]
 
     metro_stations.each do |m|
@@ -26,6 +28,11 @@ class TrainStation < ActiveRecord::Base
   end
 
   def self.closest_station lat, long
-    all.min_by(1) { |s| s.distance(lat, long) }
+    all.min_by(2) { |s| s.distance(lat, long) }
+  end
+
+  def upcoming_trains
+    # code = TrainStation.closest_station.first.code
+    @upcoming_trains ||= Train.next_trains code
   end
 end
