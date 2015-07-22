@@ -25,7 +25,7 @@ class TrainStation < ActiveRecord::Base
     Haversine.distance(other_lat.to_f, other_long.to_f, self.lat, self.long).to_mi
   end
 
-  def closest_station lat, long
+  def self.closest_station lat, long
     all.min_by(1) { |s| s.distance(lat, long) }
   end
 end

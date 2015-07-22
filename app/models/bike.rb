@@ -15,7 +15,7 @@ class Bike < ActiveRecord::Base
   end
 
   def distance other_lat, other_long
-    Haversine.distance(other_lat.to_f, other_long, self.lat, self.long)
+    Haversine.distance(other_lat.to_f, other_long.to_f, self.lat, self.long)
   end
 
   def self.closest_docks lat, long
