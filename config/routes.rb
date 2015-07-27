@@ -5,5 +5,5 @@ Rails.application.routes.draw do
 
  get '/fares/train' => 'fares#trains'
 
- get '/fares/bike' => 'fares#bikes'
+ get '/fares/uber' => 'fares#uber'
 end

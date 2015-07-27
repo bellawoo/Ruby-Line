@@ -1,9 +1,9 @@
 class FaresController < ApplicationController
-  def fares
-  start_lat, start_long, end_lat, end_long = params[:lat1], params[:long1], params[:lat2], params[:long2]
-  @ubers = UberAPI.fare_estimate start_lat, start_long, end_lat, end_long
-  # metro = MetroAPI.fare_estimate start_lat, start_long, end_lat, end_long
+  def uber
+    @ubers = UberAPI.fare_estimate params[:lat1], params[:long1], params[:lat2], params[:long2]
+  end
 
-  # @fares = ubers + metro
-end
+  def trains
+    
+  end
 end
