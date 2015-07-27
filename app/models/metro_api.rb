@@ -13,5 +13,7 @@ class MetroAPI
       query: {api_key: "#{Token}",
       FromStationCode: start_station,
       ToStationCode: end_station})
+
+    station_to_station["StationToStationInfos"]
   end
 end

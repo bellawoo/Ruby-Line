@@ -1,9 +1,9 @@
 class EstimatesController < ApplicationController
-  def bikes
+  def bike
     @bikes = Bike.closest_docks params[:lat], params[:long]  
   end
 
-  def trains
+  def train
     @trains = TrainStation.closest_station params[:lat], params[:long]
   end
 

@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
- get '/estimates/train' => 'estimates#trains'
+ get '/estimates/train' => 'estimates#train'
 
- get '/estimates/bike' => 'estimates#bikes'
+ get '/estimates/bike' => 'estimates#bike'
 
- get '/fares/train' => 'fares#trains'
+ get '/fares/train' => 'fares#train'
 
  get '/fares/uber' => 'fares#uber'
 end
