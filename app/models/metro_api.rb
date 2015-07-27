@@ -8,8 +8,10 @@ class MetroAPI
     trains.map { |t| Train.new(t) }
   end
 
-  # def self.fare_estimate start_station, end_station
-  #   https://api.wmata.com/Rail.svc/json/jSrcStationToDstStationInfo[?FromStationCode][&ToStationCode]
-   
-  # end
+  def self.fare_estimate start_station, end_station
+    station_to_station = HTTParty.get("https://api.wmata.com/Rail.svc/json/jSrcStationToDstStationInfo", 
+      query: {api_key: "#{Token}",
+      FromStationCode: start_station,
+      ToStationCode: end_station})
+  end
 end
