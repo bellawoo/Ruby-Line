@@ -33,6 +33,6 @@ class TrainStation < ActiveRecord::Base
 
   def upcoming_trains
     # code = TrainStation.closest_station.first.code
-    @upcoming_trains ||= Train.next_trains code
+    @upcoming_trains ||= MetroAPI.next_trains code
   end
 end
