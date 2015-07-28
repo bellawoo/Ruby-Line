@@ -1,5 +1,5 @@
 class Train < ActiveRecord::Base
-  belongs_to :train_stations
+  belongs_to :train_station
 
   attr_reader :line, :destination, :minutes
   def initialize api_data
