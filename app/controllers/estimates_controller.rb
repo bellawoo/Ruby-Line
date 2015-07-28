@@ -6,5 +6,4 @@ class EstimatesController < ApplicationController
   def train
     @trains = TrainStation.closest_station params[:lat], params[:long]
   end
-
 end
