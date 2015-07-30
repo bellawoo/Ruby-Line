@@ -3,14 +3,15 @@ class Bike < ActiveRecord::Base
     response = HTTParty.get("https://www.capitalbikeshare.com/data/stations/bikeStations.xml")
     docking_stations = response["stations"]["station"]
 
-    docking_stations.each do |s|
+    check = docking_stations.each do |s|
       self.where({
         :name => s["name"],
         :lat => s["lat"],
-        :long => s["long"],
+        :long => s["long"]
+      }).first_or_initialize.update({
         :bikes_avail => s["nbBikes"],
         :docks_avail => s["nbEmptyDocks"]
-        }).first_or_create!
+      })
     end
   end
 
