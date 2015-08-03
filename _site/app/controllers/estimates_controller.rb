@@ -7,8 +7,4 @@ class EstimatesController < ApplicationController
 
     @locations = bikes + train_station
   end
-
-  def fares
-
-  end
 end
