@@ -26,4 +26,15 @@ class TrainStationTest < ActiveSupport::TestCase
     assert_equal "Gallery Place", t.first.name
     assert_equal "Gallery Place", t.last.name
   end
+
+  test "upcoming trains initialized" do
+    t = TrainStation.stations
+    lat, long = 38.899016, -77.021971
+    tt = TrainStation.closest_station lat, long
+    ttt = tt.first
+    arriving = ttt.upcoming_trains
+
+    assert_equal "Gallery Place", ttt.name
+    assert_includes "RD", arriving.first.line.first
+  end
 end
