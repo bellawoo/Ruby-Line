@@ -13,17 +13,17 @@ I loved working on this project so much that I decided to add even more features
 
 #### WMATA Metrorail predictions
 
-```/estimates/train```
+`/estimates/train`
 
-Must pass parameters as ```lat``` and ```long```
+Must pass parameters as `lat` and `long`
 
 This pulls data for arrival predictions for the station closest to a fixed location. Location is based on latitude and longitude and must be passed in as parameters.
 
 #### Capital BikeShare information
 
-```/estimates/bike```
+`/estimates/bike`
 
-Must pass parameters as ```lat``` and ```long```
+Must pass parameters as `lat` and `long`
 
 This pulls data for dock and bike availabilities for the 5 closest docking stations to a fixed location. Location is based on latitude and longitude and must be passed in as parameters.
 
@@ -36,15 +36,15 @@ Fare is calculated from two given location points (a starting and an end point) 
 
 #### WMATA Metrorail fare calculator
 
-```/fares/train```
+`/fares/train`
 
-Must pass parameters as ```lat1```,```long1```,```lat2```,```long2```, ```riders```
+Must pass parameters as `lat1`,`long1`,`lat2`,`long2`, `riders`
 
 Despite the fact that #unsuckmetrodc isn't actually going to unsuck itself anytime soon, it's still one of the most economical ways to get around. Use this to pull fare information based on the closest metro stations to your start and end locations.
 
 #### Uber fare estimate
 
-Must pass parameters as ```lat1```,```long1```, ```lat2```, ```long2```, ```riders```
+Must pass parameters as `lat1`,`long1`, `lat2`, `long2`, `riders`
 
 Sometimes, it's just more economical for your group to take an Uber or hail a cab than to take the metro. But what if there's surge pricing? Is the Metro on peak right now? Use this to compare the fares to determine if Uber is right for your next trip.
 
