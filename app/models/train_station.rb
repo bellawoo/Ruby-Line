@@ -7,6 +7,7 @@ class TrainStation < ActiveRecord::Base
 
   def self.stations
     response = HTTParty.get("https://api.wmata.com/Rail.svc/json/jStations", query: {api_key: Token })
+    puts response
     metro_stations = response["Stations"]
 
     metro_stations.each do |m|
