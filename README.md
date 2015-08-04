@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/bellawoo/Ruby-Line.svg?branch=master)](https://travis-ci.org/bellawoo/Ruby-Line)
-# The Ruby Line - v3 Ruby on Rails API
+
+# The Ruby Line - v3 Ruby on Rails API [![Build Status](https://travis-ci.org/bellawoo/Ruby-Line.svg?branch=master)](https://travis-ci.org/bellawoo/Ruby-Line)
 Making your DC commute a little less painful. Get to where you need to go. Know what's coming next.
 
 Built in Sinatra as part of a collaborative project with a Front-End Student from The Iron Yard. You can find that repo under a [slightly different name](https://github.com/bellawoo/Ruby-Line-Sinatra "Ruby Line, Sinatra version").
