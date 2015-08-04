@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/bellawoo/Ruby-Line.svg?branch=master)](https://travis-ci.org/bellawoo/Ruby-Line)
+
 # The Ruby Line - v3 Ruby on Rails API
 Making your DC commute a little less painful. Get to where you need to go. Know what's coming next.
 
