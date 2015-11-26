@@ -1,13 +1,11 @@
 require 'test_helper'
 
 class BikeTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
   test "bike stations in db" do
     Bike.docks
 
-    assert_equal 353, Bike.count
+    assert_equal 357, Bike.count
   end
 
   test "calculate distance" do

@@ -23,8 +23,8 @@ class TrainStationTest < ActiveSupport::TestCase
     t = TrainStation.closest_station lat, long
 
     assert_equal 2, t.count
-    assert_equal "Gallery Place", t.first.name
-    assert_equal "Gallery Place", t.last.name
+    assert_equal "Gallery Pl-Chinatown", t.first.name
+    assert_equal "Gallery Pl-Chinatown", t.last.name
   end
 
   test "upcoming trains initialized" do
@@ -34,7 +34,7 @@ class TrainStationTest < ActiveSupport::TestCase
     ttt = tt.first
     arriving = ttt.upcoming_trains
 
-    assert_equal "Gallery Place", ttt.name
+    assert_equal "Gallery Pl-Chinatown", ttt.name
     assert_includes "RD", arriving.first.line.first
   end
 end
