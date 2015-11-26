@@ -9,7 +9,7 @@ Built in Sinatra as part of a collaborative project with a Front-End Student fro
 
 This project was later ported to Rails and adapted for iOS app development purposes. You can find that repo under ["Green Apple Line."](https://github.com/bellawoo/Green-Apple-Line "Green Apple Line")
 
-I loved working on this project so much that I decided to add even more features. The full product will be featured at The Iron Yard May 2015 cohort Demo Day as my final project.
+I loved working on this project so much that I decided to add even more features. The full product, named NavigateDC, will be featured at The Iron Yard May 2015 cohort Demo Day as my final project.
 
 ## Features
 
